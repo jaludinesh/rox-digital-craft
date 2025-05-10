@@ -18,18 +18,403 @@
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons (previously using React components) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <a href="#home" class="logo"><span class="text-orange">Rox</span>Dev</a>
+        
+        <!-- Desktop Menu -->
+        <div class="desktop-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#contact" class="cta-btn">Hire Me</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="container">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#contact" class="cta-btn">Hire Me</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Turning Ideas into Digital <span class="text-orange">Reality</span></h1>
+          <p>I build high‑performance websites, custom WordPress plugins, and Android apps that scale.</p>
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-secondary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-shape"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <div class="section-divider"></div>
+          <p>Designing Solutions, Not Just Visuals</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2f9296e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Rox - Full Profile">
+            <h3>Rox</h3>
+            <p class="role">Website & Android App Developer | WordPress Plugin Expert</p>
+            <p class="bio">With 9+ years of professional coding experience, I help startups, agencies, and educators turn ideas into polished digital products.</p>
+          </div>
+          
+          <div class="about-details">
+            <h3>My Skills & Experience</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <i data-lucide="check-circle-2"></i>
+                <p>Web & Plugin Development: PHP, JavaScript, React, WordPress hooks & ACF</p>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="check-circle-2"></i>
+                <p>Android Apps: Java, Firebase, Tesseract OCR</p>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="check-circle-2"></i>
+                <p>Agile workflows, 7–14 day delivery cycles</p>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="check-circle-2"></i>
+                <p>50+ websites launched</p>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="check-circle-2"></i>
+                <p>30+ plugins deployed</p>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="check-circle-2"></i>
+                <p>Android app with 10K+ downloads</p>
+              </div>
+            </div>
+
+            <h3>Education</h3>
+            <div class="education-list">
+              <div class="education-item">
+                <div class="education-icon">
+                  <i data-lucide="graduation-cap"></i>
+                </div>
+                <div class="education-info">
+                  <p class="year">2000</p>
+                  <h4>Aptech Learning</h4>
+                  <p>Advanced Diploma in Android App Development</p>
+                </div>
+              </div>
+              
+              <div class="education-item">
+                <div class="education-icon">
+                  <i data-lucide="graduation-cap"></i>
+                </div>
+                <div class="education-info">
+                  <p class="year">2015</p>
+                  <h4>IIDE</h4>
+                  <p>Professional Certificate in WordPress Development</p>
+                </div>
+              </div>
+              
+              <div class="education-item">
+                <div class="education-icon">
+                  <i data-lucide="graduation-cap"></i>
+                </div>
+                <div class="education-info">
+                  <p class="year">2019</p>
+                  <h4>Saurashtra University</h4>
+                  <p>M.Sc. in Physics</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Expertise Services</h2>
+          <div class="section-divider"></div>
+          <p>Let's check it out</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon bg-cyan">
+              <i data-lucide="layout"></i>
+            </div>
+            <h3>Custom Website Development</h3>
+            <p>Creating responsive, user-friendly websites tailored to your business needs using modern web technologies.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon bg-orange">
+              <i data-lucide="file-code"></i>
+            </div>
+            <h3>WordPress Plugin Development</h3>
+            <p>Building custom WordPress plugins to extend functionality and solve specific business challenges.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon bg-lime">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3>Android App Development</h3>
+            <p>Developing feature-rich Android applications with intuitive interfaces and robust functionality.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon bg-purple">
+              <i data-lucide="code"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Creating visually appealing and user-friendly interfaces for websites and mobile applications.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon bg-blue">
+              <i data-lucide="database"></i>
+            </div>
+            <h3>Custom Dashboard Interfaces</h3>
+            <p>Building intuitive admin dashboards and interfaces for plugins and web applications.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon bg-pink">
+              <i data-lucide="pen-tool"></i>
+            </div>
+            <h3>Logo Design</h3>
+            <p>Creating unique, memorable logos that represent your brand identity effectively.</p>
+          </div>
+        </div>
+
+        <div class="advanced-features">
+          <h3>Specialized Technical Expertise</h3>
+          <p>Beyond standard development services, I offer specialized technical solutions for complex business challenges.</p>
+          
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i data-lucide="activity-square"></i>
+              </div>
+              <span>Firebase Integration</span>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i data-lucide="scan-text"></i>
+              </div>
+              <span>Tesseract OCR Implementation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <div class="section-divider"></div>
+          <p>Check out some of my recent work</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Slash-32 App & Website">
+              <div class="portfolio-overlay">
+                <h3>Slash-32 App & Website</h3>
+                <p>Custom OCR model trained to recognize decorative hoodie text and convert binary to readable text.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="JewConnect (ReallyCapture)">
+              <div class="portfolio-overlay">
+                <h3>JewConnect (ReallyCapture)</h3>
+                <p>Multivendor business platform with custom plugin for sponsored listings tracking, special search box, and registration forms.</p>
+                <a href="#" class="portfolio-link">View Project</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80" alt="Invisalign">
+              <div class="portfolio-overlay">
+                <h3>Invisalign</h3>
+                <p>Modern dental site with custom animation and design features.</p>
+                <a href="http://www.invisalign.in" target="_blank" class="portfolio-link">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <div class="section-divider"></div>
+          <p>Let's discuss your project</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+          </div>
+          
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            
+            <div class="info-item">
+              <i data-lucide="mail"></i>
+              <p>
+                <span>Email:</span>
+                <a href="mailto:raghuweb007@gmail.com">raghuweb007@gmail.com</a>
+              </p>
+            </div>
+            
+            <div class="info-item">
+              <i data-lucide="external-link"></i>
+              <p>
+                <span>Fiverr:</span>
+                <a href="https://www.fiverr.com/users/roxahir" target="_blank">fiverr.com/roxahir</a>
+              </p>
+            </div>
+            
+            <div class="social-links">
+              <a href="#" class="social-link"><i data-lucide="github"></i></a>
+              <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+              <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+              <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3><span class="text-orange">Rox</span>Dev</h3>
+            <p>Transforming ideas into exceptional digital experiences with clean code and creative solutions.</p>
+            <div class="footer-social">
+              <a href="#"><i data-lucide="github"></i></a>
+              <a href="#"><i data-lucide="linkedin"></i></a>
+              <a href="#"><i data-lucide="twitter"></i></a>
+              <a href="#"><i data-lucide="instagram"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-services">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Website Development</a></li>
+              <li><a href="#services">WordPress Plugin Development</a></li>
+              <li><a href="#services">Android App Development</a></li>
+              <li><a href="#services">UI/UX Design</a></li>
+              <li><a href="#services">Custom Dashboard Interfaces</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> <span class="text-orange">Rox</span>Dev. All Rights Reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script to maintain GPT Engineer Select feature -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+      });
+    </script>
   </body>
 </html>

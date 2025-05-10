@@ -1,122 +1,52 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | RoxDev</title>
-  <link rel="stylesheet" href="/src/index.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body, html {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #f9fafb;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | RoxDev</title>
     
-    .container {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    .content {
-      text-align: center;
-      max-width: 32rem;
-    }
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     
-    .error-code {
-      font-size: 8rem;
-      font-weight: 700;
-      color: #ff9800;
-      line-height: 1;
-      margin: 0;
-    }
-    
-    .title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1a237e;
-      margin-bottom: 1.5rem;
-    }
-    
-    .description {
-      color: #4b5563;
-      margin-bottom: 2rem;
-      font-size: 1.125rem;
-    }
-    
-    .button {
-      display: inline-flex;
-      align-items: center;
-      background-color: #1a237e;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    
-    .button:hover {
-      background-color: rgba(26, 35, 126, 0.9);
-    }
-    
-    .button svg {
-      margin-right: 0.5rem;
-    }
-    
-    .footer {
-      position: absolute;
-      bottom: 2.5rem;
-      text-align: center;
-      color: #6b7280;
-    }
-    
-    .highlight {
-      color: #ff9800;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="content">
-      <h1 class="error-code">404</h1>
-      <h2 class="title">Page Not Found</h2>
-      <p class="description">
-        The page you are looking for doesn't exist or has been moved.
-      </p>
-      <a href="/" class="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m12 19-7-7 7-7"></path>
-          <path d="M19 12H5"></path>
-        </svg>
-        Back to Homepage
-      </a>
-    </div>
-    <div class="footer">
-      <p>© <script>document.write(new Date().getFullYear())</script> <span class="highlight">Rox</span>Dev. All Rights Reserved.</p>
-    </div>
-  </div>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
-  <script>
-    // Redirect to home page and show 404 component
-    window.onload = function() {
-      // For better SEO, leave the 404 status code but provide easy navigation
-      if (window.location.pathname !== '/' && !window.location.pathname.includes('.')) {
-        document.querySelector('.button').addEventListener('click', function(e) {
-          e.preventDefault();
-          window.location.href = '/';
-        });
-      }
-    }
-  </script>
-</body>
+  <body>
+    <div class="not-found">
+      <div class="not-found-content">
+        <h1 class="not-found-code">404</h1>
+        <h2 class="not-found-title">Page Not Found</h2>
+        <p class="not-found-text">
+          The page you are looking for doesn't exist or has been moved.
+        </p>
+        <a href="/" class="btn-primary">
+          <i data-lucide="arrow-left"></i>
+          Back to Homepage
+        </a>
+      </div>
+      <div class="not-found-copyright">
+        <p>
+          © <span id="currentYear404"></span> <span class="text-orange">Rox</span>Dev. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+    <!-- Script to maintain GPT Engineer Select feature -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    
+    <!-- Initialize Lucide Icons and set current year -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+        document.getElementById('currentYear404').textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
 </html>
